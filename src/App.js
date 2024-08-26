@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Sidebar from './components/Sidebar/Sidebar';
+import Navbar from './components/Navbar/Navbar';
+import Inbox from './pages/Inbox/Inbox';
+import Sent from './pages/Sent/Sent';
+import Reminder from './pages/Reminder/Reminder';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: 'flex', height: '100vh' }}>
+      <Sidebar />
+      <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+        <Navbar />
+        <div style={{ flex: 1, overflowY: 'auto' }}>
+          <Routes>
+            <Route path="/inbox" element={<Inbox />} />
+            <Route path="/sent" element={<Sent/>} />
+
+            <Route path="/reminder" element={<Reminder/>} /> 
+          </Routes>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

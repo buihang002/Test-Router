@@ -1,0 +1,37 @@
+.detail {
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .sender {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .content {
+    margin-top: 10px;
+    color: #333;
+  }
+  
