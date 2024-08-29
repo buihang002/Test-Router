@@ -7,10 +7,14 @@ const MessageCard = ({ message, onClick }) => {
       <div className={styles.header}>
         <img src={message.from.avatarUrl} alt={message.from.name} className={styles.avatar} />
         <div>
-          <h3 className={styles.title}>{message.main.title}</h3>
-          <p className={styles.sender}>{message.from.name} to {message.to.name}</p>
+          <p className={styles.sender}>{message.from.name} </p>
+          <p className={styles.sender}>{message.timestamp} </p>
+
+          
         </div>
       </div>
+      <h3 className={styles.title}>{message.main.title}</h3>
+
       <p className={styles.content}>{message.main.content.substring(0, 100)}...</p>
     </div>
     );

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import MessageCard from '../../components/MessageCard/MessageCard';
 import MessageDetail from '../../components/MessageDetail/MessageDetail';
-import styles from './Sent.module.css';  
+import styles from './Spam.module.css';  
 import messages from '../../data/messages.json';
 
-const Sent = () => {
+const Spam = () => {
   const [selectedMessage, setSelectedMessage] = useState(null);
 
   const handleCardClick = (message) => {
@@ -15,7 +15,7 @@ const Sent = () => {
     <div className={styles.container}>
       <div className={styles.leftPane}>
         <div className={styles.scrollable}>
-          {messages.filter(msg => msg.folder === 'sent').map(message => (
+          {messages.filter(msg => msg.folder === 'spam').map(message => (
             <MessageCard key={message.id} message={message} onClick={() => handleCardClick(message)} />
           ))}
         </div>
@@ -32,4 +32,4 @@ const Sent = () => {
   );
 };
 
-export default Sent;
+export default Spam;
